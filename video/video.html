@@ -1,0 +1,70 @@
+<!--
+ * @Date: 2024-07-31 09:17:25
+ * @LastEditors: e_liujianlong e_liujianlong@enn.cn
+ * @LastEditTime: 2024-08-01 08:58:04
+ * @FilePath: \javaScript\video.html
+ * @Description: Do not edit
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .videoContainer {
+        display: flex;
+        justify-content: center;
+      }
+      .video {
+        margin: 20px auto;
+        height: 500px;
+      }
+      .controls {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .process {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+      .range {
+        width: 400px;
+        margin-right: 20px;
+      }
+      .active {
+        background: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="videoContainer">
+      <video src="./滕王阁游轮.mp4" class="video"></video>
+    </div>
+    <div class="controls">
+      <button class="btnplay">播放/暂停</button>
+      <div class="process">
+        <input type="range" class="range processRange" min="0" max="100" />
+        <span class="current">current</span>/
+        <span class="total">total</span>
+      </div>
+      <div class="rate">
+        <button data-rate="0.5">0.5倍</button>
+        <button data-rate="0.75">0.75倍</button>
+        <button data-rate="1">1倍</button>
+        <button data-rate="1.25">1.25倍</button>
+        <button data-rate="1.5">1.5倍</button>
+      </div>
+      <div class="volume">
+        <input type="range" class="range volumeRange" min="0" max="100" />
+        <span class="volumeTxt">100%</span>
+      </div>
+      <div class="Save">
+        <button class="save">保存设置</button>
+        <button class="load">加载设置</button>
+      </div>
+    </div>
+    <script type="text/javaScript" src="./video.js"></script>
+  </body>
+</html>
