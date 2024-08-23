@@ -62,7 +62,6 @@ const setRate = () => {
 
 const setVolume = () => {
   const volume = doms.video.volume;
-  console.log(volume);
   doms.volume.volumeRange.value = volume * 100;
   doms.volume.volumeTxt.textContent = Math.floor(volume * 100) + "%";
 };
